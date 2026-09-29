@@ -1,0 +1,10 @@
+import os
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql+psycopg://tts:tts@localhost:5432/tts")
+STORAGE = os.getenv("STORAGE", "local")
+LOCAL_DIR = os.getenv("LOCAL_DIR", "/data/audio")
+S3_BUCKET = os.getenv("S3_BUCKET", "")
+S3_REGION = os.getenv("S3_REGION", "us-east-1")
+PIPER_MODELS = os.getenv("PIPER_MODELS", "/models")
+ELEVEN_KEY = os.getenv("ELEVENLABS_API_KEY", "")
+ELEVEN_VOICE = os.getenv("ELEVENLABS_VOICE_ID", "21m00Tcm4TlvDq8ikWAM")
+MAX_CHARS = int(os.getenv("MAX_CHARS", "50000"))
